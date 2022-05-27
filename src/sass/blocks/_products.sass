@@ -1,0 +1,121 @@
+.products
+    &_content
+        flex-wrap: wrap
+        display: flex
+        justify-content: space-between
+        &_item
+            margin-top: 1.8rem
+            background: #F4F5F7
+            position: relative
+            &:hover
+                .overlay
+                    display: block
+            &_descr
+                padding: 16px 30px 30px 16px
+                &_name
+                    font-weight: 600
+                    font-size: 1.5rem
+                    color: $text-color
+                    margin-top: 1rem
+                    margin-bottom: 0
+                &_text
+                    font-weight: 500
+                    font-size: 1rem
+                    color: #898989
+                    margin-top: 0.5rem
+                &_price
+                    margin-top: 0.5rem
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    &_new
+                        font-weight: 600
+                        font-size: 1.2rem
+                        color: $text-color
+                    &_old
+                        font-weight: 400
+                        font-size: 0.9rem
+                        color: #B0B0B0
+    &_more
+        width: 245px
+        height: 48px
+        color: $main-color
+        background-color: $white-color
+        border: 1px solid $main-color
+        display: block
+        margin: 0 auto
+        margin-top: 1.8rem
+        cursor: pointer
+        &:hover
+            background-color: $main-color
+            color: #fff
+.title
+    text-align: center
+    font-weight: 700
+    font-size: 2.5rem
+    color: $text-color
+    margin-top: 70px
+.discount
+    position: absolute
+    width: 48px
+    height: 48px
+    background-color: #E97171
+    border-radius: 100%
+    display: flex
+    justify-content: center
+    text-align: center
+    align-items: center
+    vertical-align: center
+    z-index: 2
+    // transform: translateX(-200%)
+    transform: translate(440%, -580%)
+    font-weight: 500
+    font-size: 1rem
+    color: #FFFFFF
+    &_new
+        background-color: #2EC1AC
+
+.overlay
+    background-color: rgba(3, 3, 3, 0.52)
+    left: 0%
+    top: 0%
+    position: absolute
+    width: 100%
+    height: 100%
+    display: none
+    z-index: 3
+.modal_wrapper
+    display: block
+    margin: 0 auto
+    margin-top: 75%
+    .add-to-cart
+        width: 202px
+        height: 48px
+        background-color: #fff
+        border: none
+        color: $main-color
+        font-weight: 600
+        font-size: 1rem
+        display: block
+        margin: 0 auto
+        cursor: pointer
+        &:hover
+            background-color: $main-color
+            color: #fff
+    .link
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 202px
+        margin: 0 auto
+        margin-top: 1.2rem
+        a
+            font-weight: 600
+            font-size: 1rem
+            color: #fff
+            text-decoration: none
+            align-items: center
+            display: flex
+            align-items: center
+            img
+                margin-right: 0.6rem
