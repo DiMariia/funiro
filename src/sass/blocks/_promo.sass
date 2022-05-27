@@ -1,0 +1,168 @@
+.promo
+    padding-top: 2.5rem
+    height: auto
+    background: url(../img/promo-bg.jpg) center center/cover no-repeat
+    &_header
+        display: flex
+        justify-content: space-between
+        &_logo
+            font-weight: 700
+            font-size: 1.5rem
+            width: 5%
+        &_menu
+            width: 25%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            vertical-align: center
+            a
+                font-size: 1rem
+                color: #3A3A3A
+                text-decoration: none
+                margin-right: 0.3rem
+                display: flex
+                img
+                    margin-left: 0.5rem
+        &_searchbar
+            width: 40%
+            form
+                .search
+                    height: 2.3rem
+                    width: 90%
+                    font-size: 1rem
+                    padding-left: 2.5rem
+                    padding: auto
+                    border: none
+        &_icons
+            width: 10%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            img
+                width: 1.5rem
+                height: 1.5rem
+    &_offer
+        position: absolute
+        margin-top: 100px
+        z-index: 2
+        width: 360px
+        height: 430px
+        padding: 50px 50px 50px 50px
+        background: rgba(255, 255, 255, 0.72)
+        backdrop-filter: blur(10px)
+        &_header
+            font-weight: 800
+            font-size: 2.8rem
+            color: #3A3A3A
+            line-height: 4rem
+            margin: 0
+        &_descr
+            font-weight: 500
+            font-size: 1.2rem
+            color: #898989
+            margin-top: 1rem
+        &_button
+            width: 360px
+            height: 78px
+            background-color: $main-color
+            border: none
+            font-weight: 600
+            font-size: 1.3rem
+            color: #FFFFFF
+            margin-top: 50px
+            cursor: pointer
+            &:hover
+                background-color: #e18e5b
+    &_slider
+        height: 550px
+    &_info-box
+        position: relative
+        width: 270px
+        height: 125px
+        background: rgba(255, 255, 255, 0.72)
+        backdrop-filter: blur(15px)
+        z-index: 2
+        padding: 10px 0 10px 24px
+        right: -67%
+        transform: translateY(-130%)
+        &-name
+            font-weight: 600
+            font-size: 1.7rem
+            color: #3A3A3A
+            line-height: 0.5rem
+        &-descr
+            font-weight: 500
+            font-size: 1rem
+            color: #616161
+            line-height: 0.5rem
+        &-prise
+            font-weight: 700
+            font-size: 1.3rem
+            &-arrow
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin-top: 1.3rem
+        &-arrow
+            width: 20%
+    &_carousel
+        position: relative
+        width: 100%
+        // height: 550px
+        margin: 0 auto
+        margin-top: 180px
+        &_slide
+            height: 550px
+            width: 930px
+            margin: 0 auto
+    .s1
+        transform: translateX(160px)
+
+.slick-slide
+    padding: 0 20px 0 20px
+
+.slick-prev, .slick-next
+    position: absolute
+    top: -70px
+    left: 210px
+    transform: translateY(100%)
+    transform: translateX(2000%)
+    // right: 200px
+    border: none
+    background: none
+    cursor: pointer
+    img
+        width: 48px
+        height: 48px
+    &:hover
+        opacity: 0.8
+.slick-prev
+    transform: translateX(1900%)
+
+.slick-dots
+    list-style-type: none
+    display: flex
+    justify-content: center
+    width: 120px
+    position: absolute
+    left: 0
+    top: -80px
+    transform: translateY(100%)
+    transform: translateX(450%)
+    button
+        font-size: 0px
+        position: static
+        width: 11px
+        height: 11px
+        border-radius: 100%
+        left: 47px
+        top: 8px
+        background: #D8D8D8
+        border: none
+        margin: 0px 10px
+        cursor: pointer
+        &:hover
+            background: $main-color
+.slick-active
+    button
+        background-color: $main-color
