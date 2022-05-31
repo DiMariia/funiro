@@ -1,41 +1,42 @@
 .products
-    &_content
+    &_wrapper
         flex-wrap: wrap
         display: flex
         justify-content: space-between
-        &_item
-            margin-top: 1.8rem
-            background: #F4F5F7
-            position: relative
-            &:hover
-                .overlay
-                    display: block
-            &_descr
-                padding: 16px 30px 30px 16px
-                &_name
-                    font-weight: 600
-                    font-size: 1.5rem
-                    color: $text-color
-                    margin-top: 1rem
-                    margin-bottom: 0
-                &_text
-                    font-weight: 500
-                    font-size: 1rem
-                    color: #898989
-                    margin-top: 0.5rem
-                &_price
-                    margin-top: 0.5rem
-                    display: flex
-                    justify-content: space-between
-                    align-items: center
-                    &_new
-                        font-weight: 600
-                        font-size: 1.2rem
-                        color: $text-color
-                    &_old
-                        font-weight: 400
-                        font-size: 0.9rem
-                        color: #B0B0B0
+    &_item
+        margin-top: 1.8rem
+        background: #F4F5F7
+        position: relative
+        &:hover
+            .overlay
+                display: block
+
+    &_descr
+        padding: 16px 30px 30px 16px
+    &_name
+        font-weight: 600
+        font-size: 1.5rem
+        color: $text-color
+        margin-top: 1rem
+        margin-bottom: 0
+    &_text
+        font-weight: 500
+        font-size: 1rem
+        color: #898989
+        margin-top: 0.5rem
+    &_price
+        margin-top: 0.5rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &-new
+            font-weight: 600
+            font-size: 1.2rem
+            color: $text-color
+        &-old
+            font-weight: 400
+            font-size: 0.9rem
+            color: #B0B0B0
     &_more
         width: 245px
         height: 48px
@@ -49,6 +50,7 @@
         &:hover
             background-color: $main-color
             color: #fff
+            transition: 0.2s ease-in-out
 .title
     text-align: center
     font-weight: 700
@@ -101,6 +103,7 @@
         cursor: pointer
         &:hover
             background-color: $main-color
+            transition: 0.2s ease-in-out
             color: #fff
     .link
         display: flex
