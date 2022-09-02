@@ -70,4 +70,28 @@ $(document).ready(function() {
     dots: true
   })
 
+  const setSlideTextActive = (slide) => {
+    return slide.find(".tips-title").toggleClass("active");
+  };
+
+  let prevElement = setSlideTextActive($(".slick-current"));
+
+  $(".slick-slider").on("afterChange", () => {
+      prevElement.removeClass("active");
+      let currentSlide = $(".slick-current");
+      prevElement = setSlideTextActive(currentSlide);
+  });
+
+
 });
+
+// Simulate a hover in mobile 
+
+$(document).ready(function() {
+  $('.hover').on('touchstart touchend', function(e) {
+      e.preventDefault();
+      $(this).toggleClass('hover_effect');
+  });
+});
+
+

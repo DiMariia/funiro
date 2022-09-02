@@ -1,50 +1,74 @@
 .share
-    padding-bottom: 85px
+    @include adaptiv-value("padding-bottom", 80, 30, 0)
+    @include adaptiv-value("padding-top", 80, 20, 0)
     .subtitle
         text-align: center
-        margin-top: 100px
     .title
         margin: 0 auto
-    &_wrapper
+    &__galery
+        margin-top: 20px
         display: grid
+        grid-auto-flow: row
+        overflow: hidden
         grid-template-columns: 45% 20% 35%
-        grid-template-rows: 420px 420px
-    &-box
-        margin: 10px
+        grid-template-rows: 400px 400px
+        grid-column-gap: 10px
+        grid-row-gap: 10px
+        @include maxw($pc)
+            grid-template-rows: 40vh 40vh
+        @include maxw($sm-pc)
+            grid-template-rows: 30vh 30vh
+
+        @include maxw($lg-mob)
+            grid-template-columns: 100%
+            @include adaptiv-value("grid-template-rows", 800, 150, 0)
+
+    &__wrapper
         display: flex
-        &-2
+        div
+            width: 49%
+            height: auto
+            &:last-child
+                margin-left: 2%
+            img
+                width: 100%
+                max-height: 100%
+                height: auto
+        &-col
             grid-row-start: span 2
             display: grid
             align-items: center
-            img
-                width: 100%
+            @include maxw($lg-mob)
+                display: none
+            div
+                width: 96%
                 height: auto
-    &-img
+
         &-1
-            width: 30%
-            height: 100%
-        &-2
-            width: 67%
-            height: 90%
-            margin-left: 3%
-            margin-top: 5%
-        &-9
-            width: 40%
-        &-5
-            width: 65%
-            margin-right: 3%
-        &-6
-            height: 80%
-            width: 32%
-        &-8
-            width: 60%
-            height: 70%
-        &-7
-            width: 37%
-            height: 90%
-            margin-right: 3%
+            div
+                &:first-child
+                    width: 29%
+                &:last-child
+                    width: 69%
+        &-3
+            div
+                &:first-child
+                    width: 59%
+                &:last-child
+                    width: 39%
         &-4
-            width: 57%
-            height: 70%
-            margin-top: 21%
-            margin-right: 3%
+            div
+                &:first-child
+                    width: 64%
+                &:last-child
+                    width: 34%
+        &-5
+            div
+                &:first-child
+                    width: 36%
+                &:last-child
+                    width: 62%
+    &__img-row1
+        display: flex
+        vertical-align: bottom
+        align-self: end

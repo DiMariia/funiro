@@ -1,0 +1,30 @@
+h1
+    font-weight: 800
+    @include adaptiv-font(45, 30)
+    color: #3A3A3A
+    @include adaptiv-value("line-height", 70, 42, 0)
+    margin: 0
+
+h2
+    text-align: center
+    font-weight: 700
+    @include adaptiv-font(40, 20)
+    color: $text-color
+    @include adaptiv-value("line-height", 60, 35, 0)
+
+h3
+    font-weight: 600
+    @include adaptiv-font(24, 16)
+    color: $text-color
+    margin: 0
+
+h4
+    font-weight: 600
+    @include adaptiv-font(18, 14)
+    color: #3A3A3A
+    line-height: 0.3rem
+
+.subtitle
+    font-weight: 500
+    color: #616161
+    @include adaptiv-font(16, 12)

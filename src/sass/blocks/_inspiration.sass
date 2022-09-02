@@ -1,85 +1,80 @@
 .inspiration
+    display: flex
+    justify-content: space-between
     background-color: #FCF8F3
+    @include adaptiv-value("padding-top", 50, 20, 0)
+    padding-bottom: 50px
+    @include maxw($sm-pc)
+        flex-wrap: wrap
+
     &_block
         display: inline-block
         position: relative
-        width: 380px
-        height: 275px
-        margin-left: 0
-        right: -15%
-        transform: translateY(-170%)
+        margin-left: 8rem
+        @include minw($sm-pc)
+            margin-left: 6rem
+        @include maxw($sm-pc)
+            margin: 0 auto
+            text-align: center
+            width: 55%
+        @include maxw($sm-tablet)
+            width: 70%
+        @include maxw($lg-mob)
+            width: 90%
+
+        .title, .subtitle
+            width: 80%
+            @include maxw($sm-pc)
+                width: 100%
+                text-align: center
+        .title
+            margin-left: 0
+            text-align: left
+            margin-bottom: 0
+            @include maxw($sm-pc)
+                text-align: center
+        .subtitle
+            margin-top: 1rem
     &-more
-        width: 176px
-        height: 48px
-        background-color: $main-color
-        color: #fff
-        font-weight: 600
-        font-size: 1rem
-        border: none
+        @include adaptiv-value("width", 180, 150, 0)
         margin-top: 35px
-        cursor: pointer
-        &:hover
-            background-color: #df8751
-            transition: 0.2s ease-in-out
-    &_slider
-        height: 580px
-        margin-top: 45px
     &_carousel
-        margin-left: 40%
         width: 55%
         position: relative
+        @include maxw($sm-pc)
+            width: 100%
+            margin-top: 30px
+
     &-slide
-        width: 370px
+        width: 100%
         height: auto
     .s1
-        transform: translateX(-260px)
-    &-info
-        width: 180px
-        height: 70px
-        background: rgba(255, 255, 255, 0.72)
-        backdrop-filter: blur(15px)
-        padding: 32px 32px 32px 32px
-    .info-wrapper
-        display: flex
-        position: relative
-        z-index: 2
-        right: -43%
-        transform: translateY(-390%)
-        align-items: flex-end
-        width: 300px
-    .info-name
-        font-weight: 600
-        font-size: 1.7rem
-        color: #3A3A3A
-        line-height: 0.5rem
-    .info-descr
-        font-weight: 500
-        font-size: 1rem
-        color: #616161
-        line-height: 0.5rem
+        transform: translateX(-270px)
+        @include maxw($lg-mob)
+            transform: translateX(0)
+    .slick-slide
+        @include adaptiv-value("height", 580, 320, 0)
+        @include adaptiv-value("width", 400, 200, 0)
     .slick-slide
         padding: 0 10px 0 10px
     .slick-next, .slick-prev
         position: absolute
         width: 50px
         bottom: -25%
-        transform: translateX(1450%)
         border: none
         background: none
         cursor: pointer
         img
             width: 48px
             height: 48px
+    .slick-prev
+        opacity: 0
+        @include maxw($sm-pc)
+            opacity: 1
+            z-index: 4
+            left: 0
     .slick-dots
-        transform: translateX(230%)
+        left: 50%
         top: 97%
-
-.inspiration-title
-    margin-left: 0
-    text-align: left
-    margin-bottom: 0
-.subtitle
-    font-weight: 500
-    font-size: 1rem
-    color: #616161
-    margin-top: 0.5rem
+        @include maxw($sm-pc)
+            left: calc( 50% - 70px )

@@ -1,29 +1,44 @@
 .products
+    padding-top: 50px
+    padding-bottom: 50px
+
     &_wrapper
         flex-wrap: wrap
         display: flex
         justify-content: space-between
+        margin: 0 -10px
+        @include maxw($lg-mob)
+            margin: 0
     &_item
-        margin-top: 1.8rem
         background: #F4F5F7
         position: relative
+        margin: 0 10px
+        margin-top: 32px
+        @include adaptiv-value("width", 320, 140, 0)
+        @include adaptiv-value("height", 480, 250, 0)
+        height: auto
+        @include maxw($lg-mob)
+            width: 42vw
+            margin: 0
+            margin-top: 15px
+        @include maxw($mob)
+            width: 44vw
+        img
+            width: 100%
+            height: auto
         &:hover
             .overlay
                 display: block
 
     &_descr
-        padding: 16px 30px 30px 16px
-    &_name
-        font-weight: 600
-        font-size: 1.5rem
-        color: $text-color
-        margin-top: 1rem
-        margin-bottom: 0
+        @include adaptiv-value("padding", 16, 10, 0)
     &_text
         font-weight: 500
-        font-size: 1rem
+        @include adaptiv-font(16, 10)
         color: #898989
         margin-top: 0.5rem
+        @include maxw($lg-mob)
+            margin-top: 0
     &_price
         margin-top: 0.5rem
         display: flex
@@ -31,32 +46,23 @@
         align-items: center
         &-new
             font-weight: 600
-            font-size: 1.2rem
+            @include adaptiv-font(20, 12)
             color: $text-color
         &-old
             font-weight: 400
-            font-size: 0.9rem
+            @include adaptiv-font(16, 10)
             color: #B0B0B0
     &_more
         width: 245px
-        height: 48px
         color: $main-color
         background-color: $white-color
         border: 1px solid $main-color
         display: block
         margin: 0 auto
         margin-top: 1.8rem
-        cursor: pointer
         &:hover
             background-color: $main-color
             color: #fff
-            transition: 0.2s ease-in-out
-.title
-    text-align: center
-    font-weight: 700
-    font-size: 2.5rem
-    color: $text-color
-    margin-top: 70px
 .discount
     position: absolute
     width: 48px
@@ -78,7 +84,7 @@
         background-color: #2EC1AC
 
 .overlay
-    background-color: rgba(3, 3, 3, 0.52)
+    background-color: rgba(3, 3, 3, 0.62)
     left: 0%
     top: 0%
     position: absolute
@@ -91,13 +97,13 @@
     margin: 0 auto
     margin-top: 75%
     .add-to-cart
-        width: 202px
-        height: 48px
+        @include adaptiv-value("width", 210, 110, 0)
+        @include adaptiv-value("height", 48, 40, 0)
         background-color: #fff
         border: none
         color: $main-color
         font-weight: 600
-        font-size: 1rem
+        @include adaptiv-font(16, 12)
         display: block
         margin: 0 auto
         cursor: pointer
@@ -109,16 +115,22 @@
         display: flex
         justify-content: space-around
         align-items: center
-        width: 202px
+        width: 80%
         margin: 0 auto
         margin-top: 1.2rem
         a
             font-weight: 600
-            font-size: 1rem
+            @include adaptiv-font(14, 10)
             color: #fff
             text-decoration: none
             align-items: center
             display: flex
             align-items: center
             img
-                margin-right: 0.6rem
+                margin-right: 0.5rem
+                @include adaptiv-value("height", 25, 15, 0)
+                width: auto
+
+    &_item.hover_effect
+        .overlay
+            display: block
