@@ -1,3 +1,36 @@
+$(document).ready(function () {
+  $(".header__burger").click(function (event) {
+      $(".header__burger, .header__menu").toggleClass("active");
+      $("body").toggleClass("lock");
+  });
+});
+
+$(document).ready(function () {
+  $(".menu-item").click(function (event) {
+      $(".header__burger, .header__menu").removeClass("active");
+      $("body").removeClass("lock");
+  });
+});
+
+// scroll when you click on the menu
+
+$(document).ready(function(){
+  $("#menu").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1500);
+  });
+});
+
+$(document).ready(function() {
+  $('.menu-item').click(function(event) {
+      $('.header__burger, .header__menu').removeClass('active');
+      $('body').removeClass('lock');
+
+  })
+})
+
 $(document).ready(function() {
   $('.promo_carousel').slick({
     centerMode: true,
@@ -92,6 +125,50 @@ $(document).ready(function() {
       e.preventDefault();
       $(this).toggleClass('hover_effect');
   });
+});
+
+// Validate form
+
+$(document).ready(function () {
+  function valideForms(form) {
+      $(form).validate({
+          rules: {
+              name: {
+                  required: true,
+                  minlength: 2
+              },
+              phone: "required",
+              email: {
+                  required: true,
+                  email: true
+              },
+              password: {
+                  required: true,
+                  minlength: 5
+              },
+              password_confirm: {
+                  required: true,
+                  minlength: 5,
+                  equalTo: '[name="password"]'
+              }
+          },
+          messages: {
+              name: {
+                  required: "Please enter your name",
+                  minlength: jQuery.validator.format("Enter {0} character!")
+              },
+              phone: "Please enter your phone number",
+              email: {
+              required: "Please enter your email",
+              email: "Incorrectly entered email address"
+              },
+              password: {
+                  required: "Please enter your password",
+              }
+          }
+      });
+  };
+  valideForms('#subscription');
 });
 
 

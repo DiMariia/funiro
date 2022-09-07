@@ -19,6 +19,7 @@
         margin-right: 30px
         &:last-child
             margin-right: 0
+            margin-bottom: 15px
         @include maxw($lg-mob)
             margin-right: 20px
 
@@ -49,11 +50,15 @@
             display: flex
             @include adaptiv-value("height", 50, 40, 0)
             @include adaptiv-value("margin-top", 20, 10, 0)
+            div
+                height: 100%
 
         input
             width: 210px
+            height: 100%
             background: #F4F5F7
             border: none
+            margin: 0
             padding-left: 0.5rem
         button
             background: none
@@ -68,3 +73,9 @@
         list-style-type: none
         margin-left: -38px
         margin-bottom: 0
+.error
+    @include adaptiv-font(14, 10)
+    margin-top: 10px
+    width: 100%
+    display: block
+    color: red

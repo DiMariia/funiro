@@ -16,18 +16,18 @@
        <div class="container">
             <a href="#" class="header_logo">Funiro.</a>
             
-            <div class="header__menu">
+            <div id="menu" class="header__menu">
                 <ul class="header__menu-list">
                     <li class="menu-item">
-                        <a href="#">Products</a>
+                        <a href="#products">Products</a>
                         <img class="menu-icon" src="src/img/arrow-down.png" alt="">
                     </li>
                     <li class="menu-item">
-                        <a href="#">Rooms</a>
+                        <a href="#inspiration">Rooms</a>
                         <img class="menu-icon" src="src/img/arrow-down.png" alt="down">
                     </li>
                     <li class="menu-item">
-                        <a href="#">Inspirations</a>
+                        <a href="#tips">Tips & Tricks</a>
                         <img class="menu-icon" src="src/img/arrow-down.png" alt="down">
                     </li>
                 </ul>
@@ -135,7 +135,7 @@
         </div>
     </section>
 
-    <section class="products">
+    <section id="products" class="products">
         <div class="container">
             <h2 class="products_title title">Our Products</h2>
             <div class="products_wrapper">
@@ -342,8 +342,7 @@
         </div>
     </section>
 
-    <section class="inspiration">
-
+    <section id="inspiration" class="inspiration">
         <div class="inspiration_block">
             <h2 class="inspiration-title title">50+ Beautiful rooms 
                 inspiration</h2>
@@ -367,7 +366,7 @@
             </div>
     </section>
 
-    <section class="tips">
+    <section id="tips" class="tips">
         <div class="container">
             <h2 class="title">Tips & Tricks</h2>
             <div class="tips_carousel">
@@ -484,14 +483,17 @@
     
                 <div class="footer-item footer-email">
                     <h3 class="footer-title">Stay Updated</h3>
-                    <form> 
-                        <input type="text" name="text" class="search" placeholder="Enter your email">
-                        <button><img src="src/img/email.png" alt="send"></button>
+                    <form id="subscription" action="#"> 
+                        <div>                        
+                            <input type="text" name="email" class="search" placeholder="Enter your email">
+                        </div>
+                        <button type="submit"><img src="src/img/email.png" alt="send"></button>
                       </form>
                 </div>
             </div>
         </div>
     </footer>
+    
     
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
